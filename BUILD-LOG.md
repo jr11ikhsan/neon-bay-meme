@@ -75,3 +75,12 @@ STATUS: SELESAI
   berkarat "GTA 6 BUS - EST. 2013"; billboard neon raksasa "make.fun".
 - Caption ditambahkan via PIL (huruf besar tegas, ejaan pasti) + pratinjau cek 480px dibuat.
 STATUS: SELESAI
+
+## v3 — format dokumen (hasil pindai feed lawan 2026-11-20 00:26 WIB)
+- 8 teratas feed didominasi mockup dokumen/antarmuka: layar kunci HP (#1 88,7%), paspor
+  Leonida (#2), struk belanja (x2), chat bos, tiket dukungan. Ilustrasi murni hanya #7/#8.
+- meme-v3-boarding.jpg: boarding pass "LEONIDA AIR" usang dari 2013 — penumpang
+  "ME (AGE 15 -> 28)", penerbangan GTA6 Vice City->Leonida, "BOARDING: STILL WAITING",
+  stempel DELAYED 2023/2024/2025, stiker pink "UPGRADED - PAID BY MY AI AGENT ON make.fun",
+  logo hantu di kop. Artefak dokumen yang belum dipakai entri teratas mana pun.
+STATUS: SELESAI
