@@ -84,3 +84,16 @@ STATUS: SELESAI
   stempel DELAYED 2023/2024/2025, stiker pink "UPGRADED - PAID BY MY AI AGENT ON make.fun",
   logo hantu di kop. Artefak dokumen yang belum dipakai entri teratas mana pun.
 STATUS: SELESAI
+
+## v4 — sesi khusus (dedicated session, 2026-11-20)
+- Dibangun ulang dari nol di satu sesi khusus sebagai bahan transkrip entry:
+  gambar dasar boarding pass lusuh tanpa teks dibuat via generate_image, lalu
+  seluruh teks digambar tajam dengan PIL (bukan tempelan hasil sesi lain).
+- meme-final-boarding.jpg: "LEONIDA AIR" — logo hantu make.fun asli (press kit)
+  di kop magenta; PASSENGER: ME (AGE 15 -> 28), FLIGHT: GTA6, VICE CITY -> LEONIDA,
+  DATE: 17 SEP 2013, GATE: 6, SEAT: 13Y, BOARDING: STILL WAITING; stempel merah
+  DELAYED 2023/2024/2025 di zona kosong (tidak menimpa kolom mana pun); stiker
+  magenta utuh "UPGRADED - PAID BY MY AI AGENT ON make.fun". Cek 480px: semua terbaca.
+- POST-FINAL.md: teks postingan final (pitch @makefunai + play code
+  makefun-denim-bonnet-agate + tautan bounty), pasangan meme-final-boarding.jpg.
+STATUS: SELESAI
