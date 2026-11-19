@@ -64,3 +64,14 @@ Judge-criteria mapping: (1) ghost + "make.fun" name inside both pictures, large;
 - main.ts, README.md, AGENT.md, LICENSE — kit starter, untouched
 
 STATUS: SELESAI
+
+## v2 — ilustrasi penuh (arahan Ikhsan 2026-11-20 00:22 WIB: v1 "jelek, ga menarik")
+- v1 (komposit screenshot game) DITOLAK user. v2 digambar penuh sebagai ilustrasi komik
+  (gambar AI diizinkan aturan) memakai mark resmi sebagai acuan hantu.
+- meme-v2-waiting.jpg: ruang tunggu — gamer jadi tengkorak bersarang laba-laba memegang
+  controller, papan "NOW SERVING: 2013", kalender 2013 penuh coretan; hantu make.fun keluar
+  pintu bercahaya membawa dua karung USDC + koin bintang magenta, neon "make.fun" di atas pintu.
+- meme-v2-joyride.jpg: hantu naik convertible pink melempar uang, melewati antrean halte
+  berkarat "GTA 6 BUS - EST. 2013"; billboard neon raksasa "make.fun".
+- Caption ditambahkan via PIL (huruf besar tegas, ejaan pasti) + pratinjau cek 480px dibuat.
+STATUS: SELESAI
