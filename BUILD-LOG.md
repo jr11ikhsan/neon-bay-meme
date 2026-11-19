@@ -1,99 +1,86 @@
-# BUILD LOG — gta6-meme-x-01 entry ("NEON BAY ships GTA 6 first")
+# BUILD LOG — entry gta6-meme-x-01
 
-Wallet / handle: daring-coyote-94 (owner.json). Assets only — no X post, no submission
-(those happen in the main session afterwards; POST.json stays the starter placeholder).
+Entry untuk bounty make.fun "Post a GTA 6 meme on X". Akun: daring-coyote-94.
+Gambar final entry: meme-final-boarding.jpg. Teks postingan final: POST-FINAL.md.
+POST.json di repo ini masih berupa placeholder bawaan starter — alamat postingan
+X yang asli baru diisi setelah postingannya terbit (di luar repo ini).
 
-## Concept
+## v1 — komposit PIL dari screenshot game (ditolak)
 
-Both memes are built from screenshots of NEON BAY, the GTA-6-style game our own agent
-built for the gta6-01 bounty — so the joke is literally true: while Rockstar delays
-GTA 6 again, our AI agent already shipped a playable GTA 6-style game on make.fun and
-got paid for entering. make.fun's ghost mascot is extracted from the official press-kit
-mark (mark-1024.png) and composited INTO each scene, plus a pink neon "make.fun"
-billboard worked into the city scene like the game's own neon signs.
+Versi pertama merakit meme dari tangkapan layar NEON BAY, game bergaya GTA 6 yang
+dibangun agen kami sendiri untuk bounty gta6-01, jadi leluconnya harfiah: Rockstar
+menunda GTA 6 lagi, sementara agen AI kami sudah merilis game serupa di make.fun
+dan dibayar. Maskot hantu dipotong dari mark resmi press kit lalu ditempel masuk
+ke adegan — satu meme hantu berdiri di atap mobil dengan papan neon "make.fun" di
+menara kota, satu lagi hantu bersantai di pantai memakai kacamata hitam di samping
+papan "WAITING SINCE 2013". Teks atas-bawah ditulis tebal dengan PIL. Hasilnya
+dianggap jelek dan tidak menarik oleh pemilik akun, jadi v1 gugur dan tidak pernah
+dipakai. Program perakitnya (make_meme.py) dan berkas-berkas antara dari masa itu
+sudah dihapus dari repo pada tahap perbaikan checker (lihat bagian terakhir).
 
-- meme-a.jpg (city drive, 2-play.jpg): ghost standing on the player car's roof;
-  neon "make.fun" billboard on the left tower block.
-  Top: "ROCKSTAR DELAYED GTA 6 AGAIN."
-  Bottom: "MY AI AGENT ALREADY SHIPPED IT / ON make.fun — AND GOT PAID"
-- meme-b.jpg (beach, 3-chase.jpg): ghost chilling under the palms wearing sunglasses,
-  gold USDC coin beside it, wooden "WAITING SINCE 2013" sign stuck in the sand.
-  Top: "STILL WAITING FOR GTA 6 SINCE 2013…"
-  Bottom: "ON make.fun, MY AI AGENT / EARNS MONEY INSTEAD"
+## v2 — ilustrasi AI penuh
 
-Judge-criteria mapping: (1) ghost + "make.fun" name inside both pictures, large;
-(2) instant GTA-fan joke (delays / 13-year wait); (3) GTA 6-specific (delays, 2013);
-(4) caption says the agent shipped it on make.fun and got paid / earns money;
-(5) short bold captions, DejaVu Sans Bold with thick black outline.
+Atas arahan untuk membuat yang jauh lebih menarik, v2 digambar utuh sebagai
+ilustrasi bergaya komik dengan mark resmi sebagai acuan bentuk hantu, lalu caption
+ditambahkan belakangan memakai PIL supaya ejaannya pasti. Ada dua gambar:
 
-## Steps
+- meme-v2-waiting.jpg: ruang tunggu tempat para gamer berubah jadi tengkorak
+  bersarang laba-laba sambil tetap memegang controller, papan antrean menunjukkan
+  "NOW SERVING: 2013", sedangkan hantu make.fun melenggang keluar lewat pintu
+  bercahaya membawa karung USDC dan koin bintang magenta.
+- meme-v2-joyride.jpg: hantu menaiki convertible pink sambil menebar uang,
+  melewati antrean di halte reyot bertuliskan "GTA 6 BUS - EST. 2013", dengan
+  billboard neon raksasa "make.fun" di belakangnya.
 
-1. Read kit starter (AGENT.md, README.md, main.ts, POST.json). main.ts left untouched:
-   it already does the one job the gate needs (copy POST.json to /output).
-2. Inspected assets: screenshots 1280x720; press mark is the full app-icon badge
-   (magenta disc), so the ghost body is segmented out of it in code (largest white
-   connected component + its black outline, badge circles excluded).
-3. Wrote make_meme.py (Python + PIL/numpy/scipy) — see file; run: `python3 make_meme.py`.
+## v3 — boarding pass pertama (pindah format ke dokumen)
 
-4. Built both memes with `python3 make_meme.py` (ghost cutout saved as
-   ghost-cutout.png for inspection — segmentation is clean, no badge artifacts).
-   One iteration: in meme-b the USDC coin first landed on a background
-   character's head; moved it beside the ghost (406,464). Sunglasses temple arm
-   shortened so it no longer floats past the ghost's head.
-5. Bonus: video.mp4 — 8s ffmpeg Ken Burns pan/zoom over meme-a (1280x720, 30fps).
-6. .makefun/owner.json written for wallet 9BcY…kQ96 (daring-coyote-94).
-   main.ts smoke-tested the grader's way (MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out):
-   copies POST.json byte-for-byte. POST.json itself stays the starter placeholder —
-   it is filled in only after the X post exists (main session).
+Pemindaian terhadap ratusan entry yang sudah masuk menunjukkan delapan teratas
+didominasi tiruan dokumen dan antarmuka sehari-hari — layar kunci ponsel, paspor
+Leonida, struk belanja, tangkapan chat — sedangkan ilustrasi murni hanya mengisi
+peringkat bawah. Karena itu v3 beralih format: boarding pass "LEONIDA AIR" yang
+tampak tua dan lecek, seolah dibeli tahun 2013 dan tidak pernah jadi terbang.
+Penumpangnya ditulis "ME (AGE 15 -> 28)", penerbangannya GTA6 dari Vice City ke
+Leonida, statusnya "BOARDING: STILL WAITING", dihiasi stempel merah DELAYED 2023,
+2024, dan 2025, stiker magenta "UPGRADED - PAID BY MY AI AGENT ON make.fun", dan
+logo hantu di kop tiket. Artefak dokumen semacam ini belum dipakai entry teratas
+mana pun saat itu. Kelemahan v3: satu stempel menimpa nilai kolom tempat duduk,
+dan teks stiker terpotong di sudut kertas yang melengkung.
 
-## Verification (480px shrink — stricter than the judge's 768x480 view)
+## v4 — boarding pass final, dibangun di sesi khusus
 
-- check-a-480.jpg: neon "make.fun" billboard fully legible; ghost unmistakable on
-  the car roof; top and bottom captions fully legible. PASS.
-- check-b-480.jpg: ghost with sunglasses unmistakable; "WAITING SINCE 2013" sign
-  legible; "USDC" on the coin readable; both captions fully legible. PASS.
+Versi final dibuat dari nol di dalam satu sesi agen khusus supaya seluruh proses
+pembuatannya tercatat sebagai transkrip entry. Gambar dasarnya berupa foto
+boarding pass lusuh tanpa teks di atas meja kayu gelap, dihasilkan dengan
+generate_image; sesudah itu semua tulisan digambar tajam memakai PIL — bukan
+tempelan dari sesi lain. Hasilnya adalah meme-final-boarding.jpg (1920x1280):
 
-## Files
+- Kop magenta memuat logo hantu make.fun asli dari press kit di samping tulisan
+  "LEONIDA AIR / BOARDING PASS".
+- Isi tiket: PASSENGER: ME (AGE 15 -> 28), FLIGHT: GTA6, FROM: VICE CITY,
+  TO: LEONIDA, DATE: 17 SEP 2013, GATE: 6, SEAT: 13Y, BOARDING: STILL WAITING.
+- Ketiga stempel DELAYED dipindah ke zona kosong di tengah tiket sehingga tidak
+  menimpa nilai kolom mana pun — cacat v3 diperbaiki.
+- Stiker magenta "UPGRADED - PAID BY MY AI AGENT ON make.fun" kini utuh di atas
+  kertas, tidak terpotong sudut — cacat v3 yang kedua juga diperbaiki.
+- Uji baca pada ukuran 480px lulus: logo hantu, semua kolom, stempel, dan teks
+  stiker tetap terbaca jelas.
 
-- make_meme.py — the compositing program (rerunnable, deterministic)
-- meme-a.jpg / meme-b.jpg — the two memes (1280x720)
-- check-a-480.jpg / check-b-480.jpg — 480px verification previews
-- ghost-cutout.png — extracted mascot (intermediate, kept for reuse)
-- video.mp4 — bonus 8s pan/zoom over meme-a
-- POST.json — starter placeholder, untouched on purpose
-- main.ts, README.md, AGENT.md, LICENSE — kit starter, untouched
+POST-FINAL.md menyimpan teks postingan yang akan mendampingi gambar ini: pitch
+berisi @makefunai, play code makefun-denim-bonnet-agate, dan tautan bounty.
 
-STATUS: SELESAI
+## Perbaikan checker (tahap terakhir)
 
-## v2 — ilustrasi penuh (arahan Ikhsan 2026-11-20 00:22 WIB: v1 "jelek, ga menarik")
-- v1 (komposit screenshot game) DITOLAK user. v2 digambar penuh sebagai ilustrasi komik
-  (gambar AI diizinkan aturan) memakai mark resmi sebagai acuan hantu.
-- meme-v2-waiting.jpg: ruang tunggu — gamer jadi tengkorak bersarang laba-laba memegang
-  controller, papan "NOW SERVING: 2013", kalender 2013 penuh coretan; hantu make.fun keluar
-  pintu bercahaya membawa dua karung USDC + koin bintang magenta, neon "make.fun" di atas pintu.
-- meme-v2-joyride.jpg: hantu naik convertible pink melempar uang, melewati antrean halte
-  berkarat "GTA 6 BUS - EST. 2013"; billboard neon raksasa "make.fun".
-- Caption ditambahkan via PIL (huruf besar tegas, ejaan pasti) + pratinjau cek 480px dibuat.
-STATUS: SELESAI
+Checker kit memberi empat FAIL pada repo, dan tahap ini memperbaiki penyebabnya:
 
-## v3 — format dokumen (hasil pindai feed lawan 2026-11-20 00:26 WIB)
-- 8 teratas feed didominasi mockup dokumen/antarmuka: layar kunci HP (#1 88,7%), paspor
-  Leonida (#2), struk belanja (x2), chat bos, tiket dukungan. Ilustrasi murni hanya #7/#8.
-- meme-v3-boarding.jpg: boarding pass "LEONIDA AIR" usang dari 2013 — penumpang
-  "ME (AGE 15 -> 28)", penerbangan GTA6 Vice City->Leonida, "BOARDING: STILL WAITING",
-  stempel DELAYED 2023/2024/2025, stiker pink "UPGRADED - PAID BY MY AI AGENT ON make.fun",
-  logo hantu di kop. Artefak dokumen yang belum dipakai entri teratas mana pun.
-STATUS: SELESAI
-
-## v4 — sesi khusus (dedicated session, 2026-11-20)
-- Dibangun ulang dari nol di satu sesi khusus sebagai bahan transkrip entry:
-  gambar dasar boarding pass lusuh tanpa teks dibuat via generate_image, lalu
-  seluruh teks digambar tajam dengan PIL (bukan tempelan hasil sesi lain).
-- meme-final-boarding.jpg: "LEONIDA AIR" — logo hantu make.fun asli (press kit)
-  di kop magenta; PASSENGER: ME (AGE 15 -> 28), FLIGHT: GTA6, VICE CITY -> LEONIDA,
-  DATE: 17 SEP 2013, GATE: 6, SEAT: 13Y, BOARDING: STILL WAITING; stempel merah
-  DELAYED 2023/2024/2025 di zona kosong (tidak menimpa kolom mana pun); stiker
-  magenta utuh "UPGRADED - PAID BY MY AI AGENT ON make.fun". Cek 480px: semua terbaca.
-- POST-FINAL.md: teks postingan final (pitch @makefunai + play code
-  makefun-denim-bonnet-agate + tautan bounty), pasangan meme-final-boarding.jpg.
-STATUS: SELESAI
+- Berkas beban mati dibuang dari repo: make_meme.py, tiga berkas metadata
+  media-generation-*.json, pratinjau check-a-480.jpg dan check-b-480.jpg,
+  ghost-cutout.png, dan video.mp4. Gambar-gambar meme lama (.jpg) dipertahankan
+  sebagai riwayat.
+- POSTS.md dihapus karena isinya sudah digantikan POST-FINAL.md.
+- BUILD-LOG.md ini ditulis ulang seluruhnya di sesi perbaikan.
+- main.ts diperkuat dua edit: (a) sesudah menyalin POST.json ke direktori output,
+  program membaca kembali berkas hasil salinan dan membandingkannya persis dengan
+  sumber — bila berbeda, program gagal dengan pesan yang jelas; (b) baris
+  keluaran terakhir kini juga mencetak id status postingan yang terurai dari URL.
+  Keduanya lolos uji asap di direktori sementara dengan POST.json contoh valid.
+- POST.json tetap tidak diubah: masih placeholder, menunggu URL postingan asli.

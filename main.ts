@@ -30,7 +30,18 @@ if (!match) {
 }
 
 mkdirSync(OUTPUT_DIR, { recursive: true });
-copyFileSync(postPath, join(OUTPUT_DIR, 'POST.json'));
+const copiedPath = join(OUTPUT_DIR, 'POST.json');
+copyFileSync(postPath, copiedPath);
+
+// Read the copy back and demand byte-for-byte equality with the source: a short
+// or corrupted write must fail loudly here, not hand the gate a bad POST.json.
+const sourceBytes = readFileSync(postPath);
+const copiedBytes = readFileSync(copiedPath);
+if (!sourceBytes.equals(copiedBytes)) {
+  console.error(`POST.json verification failed: the copy at ${copiedPath} is not identical to ${postPath}`);
+  process.exit(1);
+}
 
 console.log(url);
 console.log('Entry handed over: the post above is the gta6-meme-x-01 submission.');
+console.log(`Status id: ${match[2]}`);
